@@ -1,11 +1,8 @@
 #main.tf
 #defining the provider as aws
 provider "aws" {
-    region     = "${var.region}"
-    access_key = "${var.aws_access_key}"
-    secret_key = "${var.aws_secret_key}"
+    shared_credentials_files = ["~/.aws/credentials"]
 }
-
 #create a security group for RDS Database Instance
 resource "aws_security_group" "rds_sg" {
   name = "rds_sg"

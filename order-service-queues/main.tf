@@ -1,9 +1,7 @@
 #main.tf
 #defining the provider as aws
 provider "aws" {
-    region     = "${var.region}"
-    access_key = "${var.aws_access_key}"
-    secret_key = "${var.aws_secret_key}"
+    shared_credentials_files = ["~/.aws/credentials"]
 }
 # Create SNS Queue
 resource "aws_sns_topic" "orders" {
