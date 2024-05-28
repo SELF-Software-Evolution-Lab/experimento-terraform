@@ -37,6 +37,6 @@ resource "aws_db_instance" "order_service_db" {
 
 resource "aws_db_parameter_group" "order-service-db" {
   name        = "order-service-db-parameter-group"
-  family      = "postgres14"
-  description = "Parameter group for PostgreSQL 14"
+  family      = "postgres16"
+  description = "Parameter group for PostgreSQL 16"
 }
